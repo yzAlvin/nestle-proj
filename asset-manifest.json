@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/nestle-site/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/nestle-site/static/js/main.85c73875.chunk.js",
+    "main.js.map": "/nestle-site/static/js/main.85c73875.chunk.js.map",
+    "runtime-main.js": "/nestle-site/static/js/runtime-main.7bd9a9d7.js",
+    "runtime-main.js.map": "/nestle-site/static/js/runtime-main.7bd9a9d7.js.map",
+    "static/js/2.a94d06cd.chunk.js": "/nestle-site/static/js/2.a94d06cd.chunk.js",
+    "static/js/2.a94d06cd.chunk.js.map": "/nestle-site/static/js/2.a94d06cd.chunk.js.map",
+    "index.html": "/nestle-site/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/nestle-site/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.a94d06cd.chunk.js.LICENSE.txt": "/nestle-site/static/js/2.a94d06cd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7bd9a9d7.js",
+    "static/js/2.a94d06cd.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.85c73875.chunk.js"
+  ]
+}
