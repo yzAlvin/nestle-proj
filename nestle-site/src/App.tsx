@@ -4,7 +4,7 @@ const App = () => {
   return (
     <>
       <header>
-        <h1>nestle</h1>
+        <h1>Products to Avoid</h1>
         <p>
           for their horrible schemes extending from child labor to exploiting
           poor communities for water.

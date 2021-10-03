@@ -22,16 +22,24 @@ const Container = styled.div`
 `;
 
 const Card = styled.div`
-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.4)
-transition: all 0.9s cubic-bezier(0.25, 0.8, 0.25, 1);
-&:hover {
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-display: flex;
-width: 20%;
-flex-direction: column;
-padding: ${px2vw(20)};
-height: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.4)
+  transition: all 0.9s cubic-bezier(0.25, 0.8, 0.25, 1);
+  &:hover {
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: ${px2vw(20)};
+  height: 100%;
+
+  @media (min-width: 768px) {
+    width: 40%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 20%;
+  }
 `;
 
 const BoxTitle = styled.h3`
