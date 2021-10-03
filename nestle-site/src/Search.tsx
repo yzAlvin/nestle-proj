@@ -11,12 +11,16 @@ const Search = () => {
 
   const editSearchTerm = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
+  };
+
+  useEffect(() => {
     setBrands(
       nestleBrands.filter((brand) =>
         brand.name.toLowerCase().includes(searchTerm.toLowerCase())
       )
     );
-  };
+  }, [searchTerm]);
+
   return (
     <>
       <input
