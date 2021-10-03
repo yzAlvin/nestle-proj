@@ -1,9 +1,16 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import Brands from "./Brands";
 import _nestleData from "./nestle.json";
 import { NestleBrand } from "./NestleBrand";
 
-const nestleBrands = _nestleData as NestleBrand[];
+const scrapedNestleBrands = _nestleData as NestleBrand[];
+const nestleBrands = scrapedNestleBrands.reduce(
+  (prev, curr) =>
+    prev.map((b) => b.name).includes(curr.name)
+      ? prev
+      : [...prev].concat([curr]),
+  new Array<NestleBrand>()
+);
 
 const Search = () => {
   const [brands, setBrands] = useState(nestleBrands);
