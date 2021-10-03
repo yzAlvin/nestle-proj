@@ -3,7 +3,7 @@ name: Deploy Site
 on: [workflow_dispatch]
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -12,5 +12,10 @@ jobs:
           node-version: 12
       - run: yarn
         working-directory: ./nestle-site
-      - run: yarn deploy
+      - name: Deploy with gh-pages
         working-directory: ./nestle-site
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}e
