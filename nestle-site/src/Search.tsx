@@ -2,6 +2,11 @@ import { ChangeEvent, useEffect, useState } from "react";
 import Brands from "./Brands";
 import _nestleData from "./nestle.json";
 import { NestleBrand } from "./NestleBrand";
+import styled from "styled-components";
+
+const SearchBox = styled.input`
+  margin-left: 3em;
+`;
 
 const scrapedNestleBrands = _nestleData as NestleBrand[];
 const nestleBrands = scrapedNestleBrands.reduce(
@@ -30,7 +35,7 @@ const Search = () => {
 
   return (
     <>
-      <input
+      <SearchBox
         type="text"
         onChange={editSearchTerm}
         placeholder="Search for a brand!"
