@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/nestle-proj/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/nestle-proj/static/js/main.85c73875.chunk.js",
-    "main.js.map": "/nestle-proj/static/js/main.85c73875.chunk.js.map",
+    "main.js": "/nestle-proj/static/js/main.745a41d2.chunk.js",
+    "main.js.map": "/nestle-proj/static/js/main.745a41d2.chunk.js.map",
     "runtime-main.js": "/nestle-proj/static/js/runtime-main.ecc783fb.js",
     "runtime-main.js.map": "/nestle-proj/static/js/runtime-main.ecc783fb.js.map",
-    "static/js/2.a94d06cd.chunk.js": "/nestle-proj/static/js/2.a94d06cd.chunk.js",
-    "static/js/2.a94d06cd.chunk.js.map": "/nestle-proj/static/js/2.a94d06cd.chunk.js.map",
+    "static/js/2.97c80fa9.chunk.js": "/nestle-proj/static/js/2.97c80fa9.chunk.js",
+    "static/js/2.97c80fa9.chunk.js.map": "/nestle-proj/static/js/2.97c80fa9.chunk.js.map",
     "index.html": "/nestle-proj/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/nestle-proj/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.a94d06cd.chunk.js.LICENSE.txt": "/nestle-proj/static/js/2.a94d06cd.chunk.js.LICENSE.txt"
+    "static/js/2.97c80fa9.chunk.js.LICENSE.txt": "/nestle-proj/static/js/2.97c80fa9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ecc783fb.js",
-    "static/js/2.a94d06cd.chunk.js",
+    "static/js/2.97c80fa9.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.85c73875.chunk.js"
+    "static/js/main.745a41d2.chunk.js"
   ]
 }
