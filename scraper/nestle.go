@@ -3,20 +3,17 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"strings"
-	"unicode"
-
 	"io/ioutil"
-
 	"log"
 
 	"github.com/gocolly/colly"
 )
 
 type Brand struct {
-	Name  string `json:"name"`
-	Link  string `json:"link"`
-	Image string `json:"image"`
+	Name        string `json:"name"`
+	Link        string `json:"link"`
+	Image       string `json:"image"`
+	Description string `json:"desc"`
 }
 
 func main() {
@@ -24,15 +21,17 @@ func main() {
 
 	collector := colly.NewCollector()
 
-	collector.OnHTML(".embedded-entity", func(element *colly.HTMLElement) {
-		brandName := fmtName(element.Attr("title"))
-		brandLink := element.ChildAttr("a", "href")
-		brandImage := element.ChildAttr("img", "src")
+	collector.OnHTML(".listing-row", func(e *colly.HTMLElement) {
+		brandName := e.ChildAttr("a", "title")
+		brandLink := e.ChildAttr("a", "href")
+		brandImage := "https://www.nestle.com" + e.ChildAttr("img", "src")
+		brandDesc := e.ChildText("span .description")
 
 		brand := Brand{
-			Name:  brandName,
-			Link:  brandLink,
-			Image: brandImage,
+			Name:        brandName,
+			Link:        brandLink,
+			Image:       brandImage,
+			Description: brandDesc,
 		}
 
 		allBrands = append(allBrands, brand)
@@ -42,19 +41,9 @@ func main() {
 		fmt.Println("Visiting", request.URL.String())
 	})
 
-	collector.Visit("https://www.nestle.com.au/en/brands")
+	collector.Visit("https://www.nestle.com/brands/brandssearchlist")
 
 	writeJSON(allBrands)
-}
-
-func fmtName(name string) string {
-	name = strings.ToLowerSpecial(unicode.TurkishCase, name)
-
-	if strings.Contains(name, "logo") {
-		name = name[0 : strings.Index(name, "logo")-1]
-	}
-
-	return strings.Title(name)
 }
 
 func writeJSON(data []Brand) {
